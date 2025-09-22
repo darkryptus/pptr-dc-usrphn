@@ -54,10 +54,10 @@ app.listen(PORT, () => {
   await page.goto("https://discord.com/channels/1169266223125647491/1169266223125647494");
 //   console.log("Successfully logged in...");
 
-const messageBoxSelector = 'div[role="textbox"]';
+//const messageBoxSelector = 'div[role="textbox"]';
 
 await new Promise(resolve => setTimeout(resolve, 20000));
-await page.focus(messageBoxSelector);
+//await page.focus(messageBoxSelector);
 await page.keyboard.type('Hello from Puppeteer!');
 
 
