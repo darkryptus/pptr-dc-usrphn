@@ -56,7 +56,7 @@ app.listen(PORT, () => {
 
 const messageBoxSelector = 'div[role="textbox"]';
 
-await page.waitForSelector(messageBoxSelector, { visible: true });
+await new Promise(resolve => setTimeout(resolve, 20000));
 await page.focus(messageBoxSelector);
 await page.keyboard.type('Hello from Puppeteer!');
 
