@@ -11,8 +11,9 @@ app.listen(PORT, () => {
   console.log("Launching Puppeteer browser...");
 
   const browser = await launch({
-    executablePath: "/data/data/com.termux/files/usr/bin/chromium-browser",
-    headless: false
+      headless: true,
+      executablePath: '/opt/render/project/.render/chrome/opt/google/chrome/google-chrome',
+      args: ['--no-sandbox']
   });
   //In the near future `headless: true` will default to the new Headless mode headless: "new"
   const page = await browser.newPage();
